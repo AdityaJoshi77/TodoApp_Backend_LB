@@ -22,8 +22,5 @@ app.listen(port, ()=>{console.log(`Server listening on port ${port}`)});
 const dbConnect = require('d:/Programming/Courses/WEB D LB/ToDoApp/config/database')//('./config/database.js');
 dbConnect();
 
-// set up a default route ==>
-app.get('/',(req,res) => {
-    res.send('<h1> This is the homepage </h1>');
-});
+
 

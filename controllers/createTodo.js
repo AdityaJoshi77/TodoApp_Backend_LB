@@ -11,6 +11,10 @@
 
 const Todo = require('../models/todoModel.js');
 
+
+
+// POST API
+// creates new task in DB.
 const createTodo = async (req,res) =>{
     try{
         // extract title and description from the request body
@@ -24,7 +28,7 @@ const createTodo = async (req,res) =>{
             success: true,
             data: response,
             message: 'Successful Entry',
-        })
+        });
     }
     catch(err){
         console.log(err.message);
@@ -32,7 +36,7 @@ const createTodo = async (req,res) =>{
             success: false,
             data: 'internal server error',
             message: 'Todo creation failed',
-        })
+        });
     }
 }
 
